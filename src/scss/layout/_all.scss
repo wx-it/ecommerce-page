@@ -344,6 +344,9 @@
             align-items: center;
             width: 100%;
             height: 100vh;
+            position: relative;
+            border: 1px black solid;
+
         }
 
         @include c.breakpoints(tablet){
@@ -442,6 +445,81 @@
                     }
                 }
 
+        }
+
+        .toggle-images{
+            display: none;
+            position: absolute;
+            margin: 0 auto;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            left: 0;
+            right: 0;
+            z-index: 222;
+            
+            .images-display{
+                width: 500px;
+                img{
+                    width: 500px;
+                    border-radius: 10px;
+                }
+
+            }
+            .second, .third, .fourth{
+                display: none;
+            }
+          
+            .images-buttons{
+                    width: 450px;
+                    display: flex;
+                    justify-content: space-between;                   
+            
+            button{
+                width: 100px;
+                height: 100px;
+                border: none;
+                margin-top: 1rem;
+                &:hover, &:focus{
+                    opacity: 70%;   
+                }
+                
+                &:focus{
+                    border: 2px c.$Orange solid;
+                }
+                img{
+                    width: 100px;
+                }
+            }
+        }
+            
+            .first-btn{
+                background-image: url(/images/image-product-1-thumbnail.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 10px;
+            }
+
+            .second-btn{
+                background-image: url(/images/image-product-2-thumbnail.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 10px;
+            }
+
+            .third-btn{
+                background-image: url(/images/image-product-3-thumbnail.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 10px;
+            }
+
+            .fourth-btn{
+                background-image: url(/images/image-product-4-thumbnail.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 10px;
+            }
         }
 
     }

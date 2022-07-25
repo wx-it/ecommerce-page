@@ -172,10 +172,17 @@ deleteBtn.addEventListener('click', deleteCart)
 
 
 //images
+const displayImages = document.querySelector('.desktop-img');
 const firstImg = document.getElementById('first-img');
 const secondImg = document.getElementById('second-img');
 const thirdImg = document.getElementById('third-img');
 const fourthImg = document.getElementById('fourth-img');
+
+const toggleImages = document.getElementById('toggle-images')
+displayImages.addEventListener('click', ()=>{
+    toggleImages.style.display='flex';
+
+})
 
 //buttons
 const firstBtn = document.getElementById('first-btn');
