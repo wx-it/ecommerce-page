@@ -14,6 +14,406 @@
   align-items: center;
   flex-direction: column;
 }
+@media only screen and (min-width: 1000px) {
+  .container main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    border: 1px black solid;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .container main {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .container main .main-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.container main .desktop-images {
+  display: none;
+}
+@media only screen and (min-width: 1000px) {
+  .container main .desktop-images {
+    margin-top: 5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .container main .desktop-images .images-display img {
+    width: 450px;
+    border-radius: 10px;
+  }
+}
+.container main .desktop-images .second, .container main .desktop-images .third, .container main .desktop-images .fourth {
+  display: none;
+}
+.container main .desktop-images .images-buttons {
+  display: none;
+}
+@media only screen and (min-width: 1000px) {
+  .container main .desktop-images .images-buttons {
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.container main .desktop-images .images-buttons button {
+  width: 100px;
+  height: 100px;
+  border: none;
+  margin-top: 1rem;
+}
+.container main .desktop-images .images-buttons button:hover, .container main .desktop-images .images-buttons button:focus {
+  opacity: 70%;
+}
+.container main .desktop-images .images-buttons button:focus {
+  border: 2px hsl(26deg, 100%, 55%) solid;
+}
+.container main .desktop-images .images-buttons button img {
+  width: 100px;
+}
+.container main .desktop-images .images-buttons .first-btn {
+  background-image: url(/images/image-product-1-thumbnail.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+.container main .desktop-images .images-buttons .second-btn {
+  background-image: url(/images/image-product-2-thumbnail.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+.container main .desktop-images .images-buttons .third-btn {
+  background-image: url(/images/image-product-3-thumbnail.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+.container main .desktop-images .images-buttons .fourth-btn {
+  background-image: url(/images/image-product-4-thumbnail.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+.container main .toggle-images {
+  display: none;
+  position: absolute;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  z-index: 222;
+}
+.container main .toggle-images .toggle-img {
+  position: relative;
+  padding-top: 4rem;
+}
+.container main .toggle-images .toggle-img .close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  background-color: transparent;
+}
+.container main .toggle-images .toggle-img .close-btn img {
+  width: 20px;
+}
+.container main .toggle-images .images-display {
+  width: 500px;
+}
+.container main .toggle-images .images-display img {
+  width: 500px;
+  border-radius: 10px;
+}
+.container main .toggle-images .second, .container main .toggle-images .third, .container main .toggle-images .fourth {
+  display: none;
+}
+.container main .toggle-images .images-buttons {
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+}
+.container main .toggle-images .images-buttons button {
+  width: 100px;
+  height: 100px;
+  border: none;
+  margin-top: 1rem;
+}
+.container main .toggle-images .images-buttons button:hover, .container main .toggle-images .images-buttons button:focus {
+  opacity: 70%;
+}
+.container main .toggle-images .images-buttons button:focus {
+  border: 2px hsl(26deg, 100%, 55%) solid;
+}
+.container main .toggle-images .images-buttons button img {
+  width: 100px;
+}
+.container main .toggle-images .first-btn {
+  background-image: url(/images/image-product-1-thumbnail.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+.container main .toggle-images .second-btn {
+  background-image: url(/images/image-product-2-thumbnail.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+.container main .toggle-images .third-btn {
+  background-image: url(/images/image-product-3-thumbnail.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+.container main .toggle-images .fourth-btn {
+  background-image: url(/images/image-product-4-thumbnail.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+.container .images {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 100vw;
+}
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .container .images {
+    margin: 1rem 0;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .container .images {
+    display: none;
+  }
+}
+.container .images #img-display {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  z-index: -1;
+}
+.container .images #img-display img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.container .images__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0rem 1rem;
+}
+.container .images__buttons button {
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 0 0.7rem;
+  z-index: 3;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+.container .images__buttons button:active {
+  transform: scale(1.1);
+}
+.container .images__buttons button img {
+  width: 10px;
+  height: 13px;
+  margin-top: 0.1rem;
+}
+.container .description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+@media only screen and (min-width: 1000px) {
+  .container .description {
+    padding: 0;
+  }
+}
+.container .description h3 {
+  color: hsl(26deg, 100%, 55%);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+.container .description h1 {
+  color: hsl(220deg, 13%, 13%);
+  margin: 1rem 0;
+}
+@media only screen and (min-width: 1000px) {
+  .container .description h1 {
+    font-size: 40px;
+    width: 400px;
+  }
+}
+.container .description p {
+  color: hsl(219deg, 9%, 45%);
+  line-height: 1.75rem;
+}
+@media only screen and (min-width: 1000px) {
+  .container .description p {
+    width: 400px;
+  }
+}
+.container .pricing {
+  margin: 0 2rem;
+}
+@media only screen and (min-width: 1000px) {
+  .container .pricing {
+    margin: 1rem 0;
+  }
+}
+.container .pricing ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+@media only screen and (min-width: 1000px) {
+  .container .pricing ul {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+}
+.container .pricing ul .left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+@media only screen and (min-width: 1000px) {
+  .container .pricing ul .left {
+    align-items: center;
+    justify-content: start;
+  }
+}
+.container .pricing ul .left li:first-child {
+  font-weight: 700;
+  font-size: 24px;
+  color: hsl(220deg, 13%, 13%);
+}
+.container .pricing ul .left li:last-child {
+  color: hsl(26deg, 100%, 55%);
+  font-weight: 700;
+  font-size: 15px;
+  background-color: hsl(25deg, 100%, 94%);
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.75rem;
+  border-radius: 10px;
+}
+.container .pricing ul .right li {
+  text-decoration: line-through;
+  font-weight: 700;
+  color: hsl(220deg, 14%, 75%);
+  margin: 0.5rem 0;
+}
+@media only screen and (min-width: 1000px) {
+  .container .desktop-row {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 70%;
+  }
+}
+.container .inc-dec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 3rem;
+}
+@media only screen and (min-width: 1000px) {
+  .container .inc-dec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    margin: 0;
+  }
+}
+.container .inc-dec p {
+  font-weight: 700;
+  color: hsl(220deg, 13%, 13%);
+  font-size: 16px;
+}
+.container .inc-dec button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+@media only screen and (min-width: 1000px) {
+  .container .inc-dec button:last-child {
+    margin-top: 0.25rem;
+  }
+  .container .inc-dec button:hover {
+    opacity: 70%;
+  }
+}
+.container .cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+@media only screen and (min-width: 1000px) {
+  .container .cart {
+    width: 100%;
+  }
+}
+.container .cart button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(26deg, 100%, 55%);
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  margin: 0 2rem;
+  padding: 1.25rem 0rem;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px hsl(26deg, 100%, 55%);
+  transition: all 0.15s ease;
+}
+.container .cart button:hover {
+  opacity: 70%;
+}
+.container .cart button p {
+  margin: 0 1rem;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+
 .container__navbar {
   display: flex;
   align-items: center;
@@ -313,389 +713,4 @@
 }
 .container .nav-toggle[data-visible=true] {
   transform: translateX(0%);
-}
-@media only screen and (min-width: 1000px) {
-  .container main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    border: 1px black solid;
-  }
-}
-@media only screen and (min-width: 600px) and (max-width: 900px) {
-  .container main {
-    flex-wrap: wrap;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  .container main .main-content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-  }
-}
-.container main .desktop-images {
-  display: none;
-}
-@media only screen and (min-width: 1000px) {
-  .container main .desktop-images {
-    margin-top: 5rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  .container main .desktop-images .images-display img {
-    width: 450px;
-    border-radius: 10px;
-  }
-}
-.container main .desktop-images .second, .container main .desktop-images .third, .container main .desktop-images .fourth {
-  display: none;
-}
-.container main .desktop-images .images-buttons {
-  display: none;
-}
-@media only screen and (min-width: 1000px) {
-  .container main .desktop-images .images-buttons {
-    width: 450px;
-    display: flex;
-    justify-content: space-between;
-  }
-}
-.container main .desktop-images .images-buttons button {
-  width: 100px;
-  height: 100px;
-  border: none;
-  margin-top: 1rem;
-}
-.container main .desktop-images .images-buttons button:hover, .container main .desktop-images .images-buttons button:focus {
-  opacity: 70%;
-}
-.container main .desktop-images .images-buttons button:focus {
-  border: 2px hsl(26deg, 100%, 55%) solid;
-}
-.container main .desktop-images .images-buttons button img {
-  width: 100px;
-}
-.container main .desktop-images .images-buttons .first-btn {
-  background-image: url(/images/image-product-1-thumbnail.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 10px;
-}
-.container main .desktop-images .images-buttons .second-btn {
-  background-image: url(/images/image-product-2-thumbnail.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 10px;
-}
-.container main .desktop-images .images-buttons .third-btn {
-  background-image: url(/images/image-product-3-thumbnail.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 10px;
-}
-.container main .desktop-images .images-buttons .fourth-btn {
-  background-image: url(/images/image-product-4-thumbnail.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 10px;
-}
-.container main .toggle-images {
-  display: none;
-  position: absolute;
-  margin: 0 auto;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  left: 0;
-  right: 0;
-  z-index: 222;
-}
-.container main .toggle-images .images-display {
-  width: 500px;
-}
-.container main .toggle-images .images-display img {
-  width: 500px;
-  border-radius: 10px;
-}
-.container main .toggle-images .second, .container main .toggle-images .third, .container main .toggle-images .fourth {
-  display: none;
-}
-.container main .toggle-images .images-buttons {
-  width: 450px;
-  display: flex;
-  justify-content: space-between;
-}
-.container main .toggle-images .images-buttons button {
-  width: 100px;
-  height: 100px;
-  border: none;
-  margin-top: 1rem;
-}
-.container main .toggle-images .images-buttons button:hover, .container main .toggle-images .images-buttons button:focus {
-  opacity: 70%;
-}
-.container main .toggle-images .images-buttons button:focus {
-  border: 2px hsl(26deg, 100%, 55%) solid;
-}
-.container main .toggle-images .images-buttons button img {
-  width: 100px;
-}
-.container main .toggle-images .first-btn {
-  background-image: url(/images/image-product-1-thumbnail.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 10px;
-}
-.container main .toggle-images .second-btn {
-  background-image: url(/images/image-product-2-thumbnail.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 10px;
-}
-.container main .toggle-images .third-btn {
-  background-image: url(/images/image-product-3-thumbnail.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 10px;
-}
-.container main .toggle-images .fourth-btn {
-  background-image: url(/images/image-product-4-thumbnail.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 10px;
-}
-.container .images {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 400px;
-  width: 100vw;
-}
-@media only screen and (min-width: 600px) and (max-width: 900px) {
-  .container .images {
-    margin: 1rem 0;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  .container .images {
-    display: none;
-  }
-}
-.container .images #img-display {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  transition: all 0.5s;
-  z-index: -1;
-}
-.container .images #img-display img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.container .images__buttons {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0rem 1rem;
-}
-.container .images__buttons button {
-  background-color: white;
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  padding: 0 0.7rem;
-  z-index: 3;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
-}
-.container .images__buttons button:active {
-  transform: scale(1.1);
-}
-.container .images__buttons button img {
-  width: 10px;
-  height: 13px;
-  margin-top: 0.1rem;
-}
-.container .description {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 2rem;
-}
-@media only screen and (min-width: 1000px) {
-  .container .description {
-    padding: 0;
-  }
-}
-.container .description h3 {
-  color: hsl(26deg, 100%, 55%);
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-}
-.container .description h1 {
-  color: hsl(220deg, 13%, 13%);
-  margin: 1rem 0;
-}
-@media only screen and (min-width: 1000px) {
-  .container .description h1 {
-    font-size: 40px;
-    width: 400px;
-  }
-}
-.container .description p {
-  color: hsl(219deg, 9%, 45%);
-  line-height: 1.75rem;
-}
-@media only screen and (min-width: 1000px) {
-  .container .description p {
-    width: 400px;
-  }
-}
-.container .pricing {
-  margin: 0 2rem;
-}
-@media only screen and (min-width: 1000px) {
-  .container .pricing {
-    margin: 1rem 0;
-  }
-}
-.container .pricing ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style-type: none;
-}
-@media only screen and (min-width: 1000px) {
-  .container .pricing ul {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
-  }
-}
-.container .pricing ul .left {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 50%;
-}
-@media only screen and (min-width: 1000px) {
-  .container .pricing ul .left {
-    align-items: center;
-    justify-content: start;
-  }
-}
-.container .pricing ul .left li:first-child {
-  font-weight: 700;
-  font-size: 24px;
-  color: hsl(220deg, 13%, 13%);
-}
-.container .pricing ul .left li:last-child {
-  color: hsl(26deg, 100%, 55%);
-  font-weight: 700;
-  font-size: 15px;
-  background-color: hsl(25deg, 100%, 94%);
-  padding: 0.25rem 0.5rem;
-  margin: 0 0.75rem;
-  border-radius: 10px;
-}
-.container .pricing ul .right li {
-  text-decoration: line-through;
-  font-weight: 700;
-  color: hsl(220deg, 14%, 75%);
-  margin: 0.5rem 0;
-}
-@media only screen and (min-width: 1000px) {
-  .container .desktop-row {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    width: 70%;
-  }
-}
-.container .inc-dec {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 2rem 3rem;
-}
-@media only screen and (min-width: 1000px) {
-  .container .inc-dec {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 30%;
-    margin: 0;
-  }
-}
-.container .inc-dec p {
-  font-weight: 700;
-  color: hsl(220deg, 13%, 13%);
-  font-size: 16px;
-}
-.container .inc-dec button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-@media only screen and (min-width: 1000px) {
-  .container .inc-dec button:last-child {
-    margin-top: 0.25rem;
-  }
-  .container .inc-dec button:hover {
-    opacity: 70%;
-  }
-}
-.container .cart {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-}
-@media only screen and (min-width: 1000px) {
-  .container .cart {
-    width: 100%;
-  }
-}
-.container .cart button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: hsl(26deg, 100%, 55%);
-  width: 100%;
-  border: none;
-  border-radius: 10px;
-  margin: 0 2rem;
-  padding: 1.25rem 0rem;
-  cursor: pointer;
-  box-shadow: 0px 5px 10px hsl(26deg, 100%, 55%);
-  transition: all 0.15s ease;
-}
-.container .cart button:hover {
-  opacity: 70%;
-}
-.container .cart button p {
-  margin: 0 1rem;
-  color: white;
-  font-weight: 700;
-  font-size: 16px;
 }/*# sourceMappingURL=style.css.map */

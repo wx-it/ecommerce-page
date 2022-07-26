@@ -1,0 +1,336 @@
+@use '../components' as c;
+
+.container{
+    &__navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100vw;
+        padding: 1.25rem 0;
+
+        @include c.breakpoints(tablet) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90vw;
+            padding: 0;
+            border-bottom: 1px c.$Grayish-blue solid;
+        }
+
+
+        @include c.breakpoints(desktop) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90vw;
+            padding: 0;
+            border-bottom: 1px c.$Grayish-blue solid;
+        }
+        
+        .start, .end{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+        @include c.breakpoints(desktop) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        }
+
+
+        .links{
+            display: none;
+            @include c.breakpoints(tablet){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 60%;
+                margin: 0 1rem;
+
+                a{
+                    text-decoration: none;
+                    margin: 0 0.5rem;
+                    color: c.$Dark-grayish-blue;
+                    padding: 37px 0;
+                    height: 100%;
+                    transition: all .15s ease;
+                    border-bottom: 3px solid hsl(0, 0%, 100%);
+                    
+                    &:hover{
+                        color: black;
+                          border-bottom: 3px solid hsl(26, 100%, 55%);
+                    }
+                }
+            }
+            @include c.breakpoints(desktop) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 60%;
+
+                a{
+                    text-decoration: none;
+                    margin: 0 1rem;
+                    color: c.$Dark-grayish-blue;
+                    padding: 37px 0;
+                    height: 100%;
+                    transition: all .15s ease;
+                    border-bottom: 3px solid hsl(0, 0%, 100%);
+                    
+                    &:hover{
+                        color: black;
+                          border-bottom: 3px solid hsl(26, 100%, 55%);
+                    }
+                }
+           }
+        }
+
+        .start{
+            width: 50%;
+            justify-content: space-around;
+            margin-left: 0.5rem;
+            @include c.breakpoints(tablet) {
+                justify-content: space-between;
+            }
+
+
+             >img:last-child{
+               width: 30%;
+           }
+           
+             button{
+               background-color: transparent;
+               border: none;
+               margin-top: .5rem;
+               @include c.breakpoints(desktop) {
+                display: none;
+           }
+           @include c.breakpoints(tablet){
+            display: none;
+        }
+               
+           }
+           
+            button img{
+               width: 100%;
+           }
+        }
+
+        .end{
+            position: relative;
+            button{
+                position: relative;
+                border: none;
+                background-color: transparent;
+               cursor: pointer;
+
+
+                .number{
+                    display: block;
+                    position: absolute;
+                    top: -.65rem;
+                    right: -.75rem;
+                    padding: 0.1rem .65rem;
+                    border-radius: 30px;
+                    background-color: c.$Orange;
+                    color: white;
+                    font-weight: 700;
+                    font-size: 10px;
+                }
+            }
+
+            > img:last-child{
+                width: 20%;
+               @include c.breakpoints(desktop) {
+                width: 40%;
+                border: 2px solid hsl(0, 0%, 100%);
+                border-radius: 50%;
+                transition: all .15s ease;
+                cursor: pointer;
+                &:hover{
+                    border: 2px c.$Orange solid;
+                }
+               }
+            }
+        }
+    
+        
+    }
+
+    .cart-toggle{
+        position: absolute;
+        margin: 0 auto;
+        top: 5rem;
+        left: 0rem;
+        right: 0rem;
+        width: 350px;
+        background-color: white;
+        z-index: 3;
+        border-radius: 10px;
+        box-shadow: 0 8px 10px 10px rgba($color: #000000, $alpha: 0.1);
+        transform: translateY(-10px);
+        opacity: 0;
+        transition: all 150ms ease-in-out;
+       
+        @include c.breakpoints(desktop) {
+            position: absolute;
+            margin: 0;
+            right: 2rem;
+            top: 6.5rem;
+            left: auto;
+        }
+
+        @include c.breakpoints(tablet) {
+            position: absolute;
+            margin: 0;
+            right: 2rem;
+            top: 6.5rem;
+            left: auto;
+        }
+
+        h3{
+            padding: 1rem 1.5rem;
+            border-bottom: 1px c.$Grayish-blue solid;
+        }
+        .empty-cart{
+            display: block;
+            p{
+                text-align: center;
+                margin: 5.5rem 0;
+                font-weight: 700;
+                color: c.$Dark-grayish-blue;
+            }
+        }
+
+        .full-cart{
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: 1.5rem 2rem;
+
+            .row{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                h5{
+                    color: c.$Dark-grayish-blue;
+                    font-weight: 400;
+                    font-size: 13px;
+                }
+
+
+                img:first-child{
+                    width: 20%;
+                    border-radius: 5px;
+                }
+    
+                .content{
+                    display: flex;
+                    flex-direction: column;
+                }
+    
+                ul{
+                    list-style-type: none;
+                    display: flex;
+    
+                    li:first-child{
+                        color: c.$Dark-grayish-blue;
+                    }
+    
+                    li:last-child{
+                         font-weight: 700;
+                         margin: 0 .5rem;
+                    }
+                }
+
+                .delete{
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+
+                    img{
+                      width: 100%;   
+                    }
+                }
+            }
+
+            .checkout{
+                background-color: c.$Orange;
+                border: none;
+                border-radius: 10px;
+                margin: 0 2rem;
+                padding: 1.25rem 0;
+                color: white;
+                font-weight: 700;
+                font-size: 15px;
+                width: 100%;
+                margin-top: 2rem;
+    
+            }
+
+        }
+
+
+    }
+    
+    .cart-toggle[data-toggle = "true"] {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+
+   
+  
+
+    .nav-toggle{
+        position: absolute;
+        top: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 5rem 10rem 0 2.5rem;
+        background-color: white;
+        z-index: 4;
+        transform: translateX(-100%);
+        transition: all .7s ease-in-out;
+        @include c.breakpoints(desktop) {
+             display: none;
+        }
+        @include c.breakpoints(tablet){
+            display: none;
+        }
+
+        button{
+            border: none;
+            background-color: transparent;
+        }
+
+        button{
+
+            img{
+                position: absolute;
+                top: 1.75rem;
+                left: 2.25rem;
+            }
+        } 
+
+        a{
+            text-decoration: none;
+            color: black;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-size: 16px;
+        }
+    }
+
+    .nav-toggle[data-visible = "true"]{
+        transform: translateX(0%);
+    }
+
+
+
+}
