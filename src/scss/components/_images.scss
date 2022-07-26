@@ -1,3 +1,6 @@
+@use '../components' as c;
+
+
 .desktop-images{
     display: none;
     @include c.breakpoints(desktop) {
@@ -93,6 +96,7 @@
     z-index: 222;
 
     .toggle-img{
+        display: none;
         position: relative;
         padding-top: 4rem ;
         .close-btn{
@@ -106,11 +110,22 @@
                 width: 20px;
             }
         }
+
+        .toggle-images-btn{
+                width: 500px;
+                height: 500px;
+                border: 1px black solid;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+        }
+        
     }
     
     .images-display{
         width: 500px;
         img{
+            position: absolute;
             width: 500px;
             border-radius: 10px;
         }
