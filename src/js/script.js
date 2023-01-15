@@ -178,10 +178,16 @@ const secondImg = document.getElementById('second-img');
 const thirdImg = document.getElementById('third-img');
 const fourthImg = document.getElementById('fourth-img');
 
+const closeDisplayImgBtn = document.getElementById('close-images-display-btn'); 
+
 const toggleImages = document.getElementById('toggle-images')
 displayImages.addEventListener('click', ()=>{
     toggleImages.style.display='flex';
+    toggleImages.style.border='1px blue solid';
+})
 
+closeDisplayImgBtn.addEventListener('click', ()=>{
+    toggleImages.style.display= 'none';
 })
 
 //buttons
