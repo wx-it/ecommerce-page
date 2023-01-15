@@ -85,7 +85,7 @@
 }
 
 .toggle-images{
-    display: none;
+    display: flex;
     position: absolute;
     margin: 0 auto;
     flex-direction: column;
@@ -95,6 +95,7 @@
     left: 0;
     right: 0;
     z-index: 222;
+    border: 1px black solid;
 
     .toggle-img{
         display: none;
@@ -115,7 +116,6 @@
         .toggle-images-btn{
                 width: 500px;
                 height: 500px;
-                border: 1px black solid;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -125,6 +125,7 @@
     
     .images-display{
         width: 500px;
+        display: block;
         img{
             position: absolute;
             width: 500px;
