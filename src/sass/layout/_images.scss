@@ -85,56 +85,69 @@
 }
 
 .toggle-images{
-    display: none;
+    display: flex;
     position: absolute;
-    margin: 0 auto;
+    margin: 0;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    height: 100%;
+    top: 0;
     left: 0;
     right: 0;
     z-index: 222;
-    border: 1px black solid;
+
 
     .toggle-img{
-        display: none;
         position: relative;
-        padding-top: 4rem ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+       
+      .close-div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
         .close-btn{
-            position: absolute;
-            right: 0;
-            top: 0;
             border: none;
             background-color: transparent;
+            display: flex;
+            align-content: flex-end;
 
             img{
                 width: 20px;
             }
         }
+      }
+
+        /* prev / next buttons */
 
         .toggle-images-btn{
-                width: 500px;
-                height: 500px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 500px;
         }
         
-    }
-    
-    .images-display{
-        width: 500px;
-        display: block;
-        img{
-            position: absolute;
+        .images-display{
             width: 500px;
-            border-radius: 10px;
+            padding: 0;
+            img{
+                position: absolute;
+                top: 2rem;
+                width: 500px;
+                border-radius: 10px;
+            }
+    
         }
-
-    }
-    .second, .third, .fourth{
-        display: none;
+        
+        .second, .third, .fourth{
+            display: none;
+        }
     }
   
     .images-buttons{
@@ -158,7 +171,6 @@
             width: 100px;
         }
     }
-}
     
     .first-btn{
         background-image: url(/images/image-product-1-thumbnail.jpg);
@@ -187,6 +199,7 @@
         background-size: cover;
         border-radius: 10px;
     }
+}
 }
 
 .images{
