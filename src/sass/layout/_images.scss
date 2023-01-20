@@ -161,9 +161,10 @@
         .images-display{
             width: 500px;
             padding: 0;
+            transition: all 0.5s;
             img{
                 position: absolute;
-                top: 2rem;
+                top: -31.2rem;
                 width: 500px;
                 border-radius: 10px;
             }
